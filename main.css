@@ -1,0 +1,89 @@
+ @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
+        
+        #webPage {
+            width:80%
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        #section1, #whitewater {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        }
+        #logo {
+        background-color: white;
+        position: relative;
+        height: 120px;
+        
+        }
+        .fullwidth {
+        width=100%;
+        }
+        img {
+            max-width:100%;
+        }
+        #foot {
+            display: flex;
+            align-items: center;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            background-color:#DFC476;
+            height: 40px;
+            
+        }
+        #icons {
+          
+        }
+        #bottomRow {
+            text-align: center;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: -25px;
+        }
+        nav {
+            background-color:#DB7359;
+            color: #313A75;
+            font-size: 1.2em;
+            line-height: 3;
+            margin-top: -95px;
+            padding-left: 130px;
+            
+        }
+
+        nav li {
+        display: inline-block;
+        }
+
+        nav ul {
+        margin: 0;
+        }
+        .rightColumn, .leftColumn{
+            width: 48%;
+            flex: 1 0 15em;
+            margin: .5em;
+        }
+        #whitewater {
+            background-color:#DFC476;
+        }
+        section {
+            padding:15px
+        }
+        body {
+            font-family: Trebuchet, Helvetica, sans-serif;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            color: #3984A7;
+            font-family: "Alfa Slab One";
+        }
+        .darkBlue {
+            color: darkblue;
+        }
+        p {
+            line-height:1.5;
+            margin-bottom: 0em
+        }
+        h2 {
+            line-height: 1.2;
+            margin-bottom: 0em
+        }
+        
