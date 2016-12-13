@@ -6,7 +6,7 @@
             margin: 0 auto;
             background-color: lightgoldenrodyellow;
         }
-        #section1, #whitewater {
+        #section1, #whitewater{
         display: flex;
         flex-flow: row wrap;
         align-items: center;
@@ -19,8 +19,24 @@
         margin-left: 20px;
         
         }
+        #ratesDates {
+        align-items: right;
+        width: 50%;
+        }
+        .title {
+        background-color: #DFC476;
+         text-align: center;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 25px;
+        
+        }
+        
+        #ratesDatesHead {
+        float: right;
+        }
         .fullwidth {
-        width=400%;
+        width= 1000px;
         }
         img {
             max-width:100%;
