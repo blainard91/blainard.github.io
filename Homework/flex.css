@@ -1,0 +1,20 @@
+html {
+    direction:ltr;
+}
+
+.container p{
+    min-height:300px;
+    display:flex;
+    flex-flow: row wrap;
+    border:2px dashed;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: center;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: #eee;
+    border: 2px solid;
+}
