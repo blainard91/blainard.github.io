@@ -1,20 +1,32 @@
 html {
     direction:ltr;
 }
-
-.container p{
-    min-height:300px;
-    display:flex;
-    flex-flow: row wrap;
-    border:2px dashed;
-    justify-content: space-around;
-    align-items: stretch;
-    align-content: center;
+@media screen and (min-width:450px){
+    .container {
+        min-height:300px;
+        display:flex;
+        flex-flow: row wrap;
+        border:2px dashed;
+        justify-content: center;
+        align-items: stretch;
+        align-content: center;
+    }
 }
-
 .box {
-    width: 100px;
-    height: 100px;
+    flex-grow: 1;
+    flex-shrink:1;
+    flex-basis:auto;
+    height: 150px;
     background: #eee;
     border: 2px solid;
+    text-align:center;
+    font-size: 5em;
+    font-family: sans-serif;
+}
+
+.box:nth-child(3) {
+    flex:3 1 auto;
+    align-self:center;
+    height:auto;
+    order:0;
 }

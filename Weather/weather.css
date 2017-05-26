@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+
 * {
     box-sizing: border-box;    /* changes width property to total width instead of content width */
 
@@ -15,17 +17,33 @@ figure {
     display: block;   /* just in case we have any older browsers that don't recognize the HTML5 semantic elements */
 }
 
+header {
+    background-color: #A6D8DB;
+    margin-top: 0;
+}
+
+.rotate25 {
+    transform: rotate(25deg);
+    display: inline-block;
+}
+
+.title {
+}
+
 body {
     margin: 0;
     padding: 0;
-    background-color: deepskyblue;
+    background-color: salmon;
     padding-bottom: 50px;
+    font-size: 20px;
 }
 
 main {
     display:flex;
     flex-flow: column nowrap;
     align-items: center;
+    background-image: url("sunny-winter.jpg");
+    background-size: cover;
 }
 
 nav ul {
@@ -39,19 +57,94 @@ nav {
     bottom: 0;
     left: 0;
     right: 0;
+    background-color:#F07C6C
+}
+
+nav li{
+    margin: auto;
+}
+
+nav a:link {
+    text-decoration: none;
+    color: #47556F;
+}
+
+nav a:visited{
+    color: #4A4653;
+}
+
+nav a:hover{
+    color: #E7EF61;
+}
+
+nav a:active{
+    color: #A6D8DB;
 }
 
 .title h1 + h1 {
     text-align: right;
 }
 
-.summary {
-    display: flex;
-    justify-content: space-between;
+.summary h2 {
+    text-align: center;
+
 }
+
+.summary {
+    background-color: rgba(200,200,200,.6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.summary2 {
+    display: flex;
+
+}
+
+.wind{
+    display:flex;
+    justify-content: space-around;
+}
+
+.precipitation{
+    display:flex;
+    justify-content: space-around;
+}
+
+.wind p {
+    margin-bottom: auto;
+    padding-top: 9px;
+}
+
+.precipitation p {
+    margin-bottom: auto;
+    padding-top: 9px;
+}
+
 
 .current_title {
     display:inline-flex;
+    margin-left: 20px;
+}
+
+.sunshine {
+    margin-left: 25px;
+}
+
+.left_bar {
+    background-color: rgba(200,200,200,.6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 5px;
+    width: 60%
+}
+
+footer {
+    background-color:#A6D8DB;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
 }
 
 @media only screen and (max-width: 600px){
@@ -66,4 +159,13 @@ nav {
     #current_weather {
         display:none;
     }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Sansita, Geneva, generic-family;
 }
