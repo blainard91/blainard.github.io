@@ -147,7 +147,6 @@ footer {
     margin: auto;
 }
 
-@media only screen and (max-width: 600px){
     .center_bar {
         order:-1;
     }
@@ -159,7 +158,6 @@ footer {
     #current_weather {
         display:none;
     }
-}
 
 h1,
 h2,
@@ -168,4 +166,79 @@ h4,
 h5,
 h6 {
     font-family: Sansita, Geneva, generic-family;
+}
+
+@media screen and (min-width: 34em) {
+    .title {
+        width: 20em;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .center_bar {
+        order:0;
+        background-image: url("sunny-winter.jpg");
+        text-align: center;
+    }
+
+    .sunshine {
+        margin: auto;
+    }
+
+    .right_bar{
+        display: block;
+    }
+
+    .left_bar{
+        height:100%;
+    }
+
+    #current_weather {
+        display: block;
+    }
+
+    main {
+        flex-direction: row;
+        align-items: stretch;
+        background-image: none;
+        background-color: #A6D8DB;
+
+    }
+
+    main > section {
+        flex: 1 0 30%;
+        border-radius: 0px;
+    }
+
+    main > .left_bar, .right_bar {
+        background-color: rgba(200,200,200,.6);
+        margin: auto;
+        border: 1px solid;
+
+    }
+
+    .right_bar > ul {
+        list-style-type: none;
+        padding-left: 0;
+        max-height: 12em;
+        overflow: auto;
+    }
+    .right_bar ul li {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .right_bar h2 {
+        text-align: center;
+    }
+
+    body {
+        width: 80%;
+        max-width: 800px;
+        margin: auto;
+    }
+
+
 }
