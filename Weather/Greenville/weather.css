@@ -287,22 +287,23 @@ h6 {
 
     .navigation2{
         margin: 0;
+        padding: 0;
+        margin-top: 25px;
         overflow:hidden;
         text-align: center;
         list-style: none;
+        display: flex;
+
+
     }
 
-    .navigation2 ul{
-        margin: 0;
-        padding: 0;
-    }
-
-    .navigation2 ul li{
+    .navigation2 li{
         display: inline-block;
         list-style-type: none;
+        margin-left: 5px;
     }
 
-    .navigation2 > ul > li > a{
+    .navigation2 > li > a{
         display: block;
         padding: 0.5em 1em;
         text-decoration: none;
@@ -314,6 +315,42 @@ h6 {
         text-align: left;
         padding-right: 0em;
         order: -1;
+    }
+
+    .headline {
+        display: flex;
+        flex-wrap:wrap;
+    }
+
+    .center_bar {
+        text-align: center;
+        margin:auto;
+    }
+
+    .left_bar {
+        width:auto;
+        text-align: center;
+        flex-shrink: 3;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .right_bar{
+        display: block;
+        background-color: rgba(200,200,200,.9);
+        margin: .2em auto;
+        border: 1px solid;
+        border-radius: 5px;
+        padding: 1em;
+    }
+
+    .right_bar ul {
+        overflow-y:scroll; height:100px;
     }
 }
 
