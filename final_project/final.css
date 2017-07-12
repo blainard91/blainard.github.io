@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Taviraj');
+
+
+body {
+    background-color: #363636;
+    color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+header h1 {
+    display: none;
+}
+
+ul {
+    display:flex;
+    list-style: none;
+}
+
+li {
+    font-family: 'Taviraj', serif;
+}
+
+#logoimg {
+    width: 6em;
+}
+
+.navigation {
+    justify-content: space-between;
+    padding-left: 0;
+    text-align: center;
+    background-color: black;
+    margin: 0;
+    height: 110px;
+}
+
+.navigation li{
+    width: 6em;
+}
+
+nav a:link {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+nav a:visited{
+    color: #FFDE18;
+}
+
+nav a:hover{
+    color: #E7EF61;
+}
+
+nav a:active{
+    color: grey;
+}
+
+#banner {
+    width: 100%;
+
+}
+
+.offers {
+    background-image: url(acousticmedium.jpg)
+}
+
+.offers h2 {
+    text-align: center;
+    background-color: rgba(0,0,0,.6);
+    margin: .1em auto;
+    border: 1px solid;
+    width: 50%;
+}
+
+.offertitles li {
+    justify-content: space-between;
+}
+
+
+
+
