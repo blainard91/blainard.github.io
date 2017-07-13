@@ -1,9 +1,4 @@
-// Current Location Scripts
-(function () {
 
-    getData();
-
-            });
 
     function getJSON(url) {
         return fetch(url)
@@ -15,61 +10,40 @@
             });
     }
 
-    function getData() {
-        var url = "https://blainard91.github.io/final_project/dropd.json";
-        getJSON(url).then(function (data) {
-            console.log(data);
-            var city = data["location"]["city"];
-            var state = data["location"]["state"];
-            var temp = data["current_observation"]["feelslike_f"];
-            var weather = data["current_observation"]["weather"];
-            var precipToday = data["current_observation"]["precip_today_in"];
-            var windmph = data["current_observation"]["wind_mph"];
 
-            var cityDisplay = document.getElementById('cityDisplay');
+(function init() {
+    var about = document.getElementById('about');
+    var facilities = document.getElementById('facilities');
 
-            var currentTemp = document.getElementById('currentTemp');
+    about.addEventListener('click', function(event) {
+        event.preventDefault();
+        fetchData('About');
+    });
+    facilities.addEventListener('click', function(event) {
+        event.preventDefault();
+        fetchData('Facilities');
+    });
+}) ();
 
-            var summary = document.getElementById('summary');
-
-            var precipitation = document.getElementById('precipitation');
-
-            var windSpeed = document.getElementById('windSpeed');
-
-            cityDisplay.innerHTML = city + ', ' + state;
-            currentTemp.innerHTML = temp + '&deg; F';
-            summary.innerHTML = weather;
-            precipitation.innerHTML = 'Precipitation: ' + precipToday + ' inches';
-            windSpeed.innerHTML = 'Wind Speed: ' + windmph + ' mph';
-
-            document.getElementById("cover").classList.add('fadeout');
-
-        });
-
-
-    }
 
     function fetchData(grab) {
-        var url = "/blainard91.github.io/Weather/Javascript/weather.json";
+        var url = "/blainard91.github.io/final_project/dropd.json";
         getJSON(url).then(function (data) {
             console.log(data);
-            var city = data[grab]["City"];
-            var state = data[grab]["State"];
-            var high = data[grab]["High"];
 
-            var location = document.getElementById('location');
-            var temp = document.getElementById('temp');
+            var title = data[grab]["Title"];
+            var paragraph = data[grab]["Paragraph"];
 
-            location.innerHTML = city + ', ' + state;
-            temp.innerHTML = high;
+
+            var pagetitle = document.getElementById('title');
+            var pageparagraph = document.getElementById('paragraph');
+
+            pagetitle.innerHTML = title;
+            pageparagraph.innerHTML = paragraph;
 
         });
 
-        // A function for changing a string to TitleCase
-        function toTitleCase(str) {
-            return str.replace(/\w+/g, function (txt) {
-                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-            });
-        }
-    }
+        };
 
+
+fetchData();
