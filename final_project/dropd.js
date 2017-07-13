@@ -1,4 +1,9 @@
+// Current Location Scripts
+(function () {
 
+    getData();
+
+            });
 
     function getJSON(url) {
         return fetch(url)
@@ -10,14 +15,11 @@
             });
     }
 
-    (function getData() {
-        var url = "dropd.json";
+    function getData() {
+        var url = "https://blainard91.github.io/final_project/dropd.json";
         getJSON(url).then(function (data) {
             console.log(data);
-
-            var page = data.page;
-
-            var heading = data["location"]["city"];
+            var city = data["location"]["city"];
             var state = data["location"]["state"];
             var temp = data["current_observation"]["feelslike_f"];
             var weather = data["current_observation"]["weather"];
@@ -45,7 +47,7 @@
         });
 
 
-    });
+    }
 
     function fetchData(grab) {
         var url = "/blainard91.github.io/Weather/Javascript/weather.json";
@@ -69,4 +71,5 @@
                 return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
             });
         }
-    };
+    }
+
