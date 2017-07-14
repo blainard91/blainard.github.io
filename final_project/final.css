@@ -280,10 +280,41 @@ footer a:active{
     color: grey;
 }
 
+div a:link {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+div a:visited{
+    color: #FFDE18;
+}
+
+div a:hover{
+    color: #E7EF61;
+}
+
+div a:active{
+    color: grey;
+}
+
+.offers a {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+}
+
 #paragraph {
     padding: 2em;
 }
 
+.pricing {
+    text-align: center;
+}
+
+.pricing ul {
+    padding-right: 2.5em;
+    padding-bottom: 2em;
+}
 
 @media screen and (max-width: 34em){
 
