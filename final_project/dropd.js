@@ -17,11 +17,11 @@
 
     about.addEventListener('click', function(event) {
         event.preventDefault();
-        fetchData('About');
+        fetchData('about');
     });
     facilities.addEventListener('click', function(event) {
         event.preventDefault();
-        fetchData('Facilities');
+        fetchData('facilities');
     });
 }) ();
 
@@ -31,8 +31,8 @@
         getJSON(url).then(function (data) {
             console.log(data);
 
-            var title = data[grab]["Title"];
-            var paragraph = data[grab]["Paragraph"];
+            var title = data[grab]['title'];
+            var paragraph = data[grab]['paragraph'];
 
 
             var pagetitle = document.getElementById('title');

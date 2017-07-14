@@ -225,6 +225,7 @@ nav a:active{
     padding: 0;
 }
 .contactfooter {
+    background: #252525;
     background-color: rgba(0,0,0,.6);
     margin: .1em auto;
     border: 1px solid;
@@ -281,6 +282,9 @@ footer a:active{
     color: grey;
 }
 
+#paragraph {
+    padding: 2em;
+}
 
 
 @media screen and (max-width: 34em){
