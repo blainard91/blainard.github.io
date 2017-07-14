@@ -1,4 +1,13 @@
-
+var parseQueryString = function(url) {
+    var urlParams = {};
+    url.replace(
+        new RegExp("([^?=&]+)(=([^&]*))?", "g"),
+        function($0, $1, $2, $3) {
+            urlParams[$1] = $3;
+        }
+    );
+    return urlParams;
+}
 
     function getJSON(url) {
         return fetch(url)
@@ -14,6 +23,20 @@
 (function init() {
     var about = document.getElementById('about');
     var facilities = document.getElementById('facilities');
+
+    console.log(window.location);
+
+    //if (page == 'about'){
+     //   fetchData('about');
+    //}
+
+    //else if (page == 'facilities'){
+    //    fetchData('facilities');
+    //}
+
+   // else {
+
+    //}
 
     about.addEventListener('click', function(event) {
         event.preventDefault();
@@ -44,5 +67,6 @@
         });
 
         };
+
 
 
