@@ -23,20 +23,16 @@ var parseQueryString = function(url) {
 (function init() {
     var about = document.getElementById('about');
     var facilities = document.getElementById('facilities');
+    var page = parseQueryString(window.location.href);
+    console.log(page);
 
-    console.log(window.location);
+    if (page["page"]=="about"){
+        fetchData('about');
+    }
 
-    //if (page == 'about'){
-     //   fetchData('about');
-    //}
-
-    //else if (page == 'facilities'){
-    //    fetchData('facilities');
-    //}
-
-   // else {
-
-    //}
+    else if (page["page"]=="facilities"){
+        fetchData('facilities');
+    }
 
     about.addEventListener('click', function(event) {
         event.preventDefault();
@@ -50,7 +46,7 @@ var parseQueryString = function(url) {
 
 
     function fetchData(grab) {
-        var url = "/blainard91.github.io/final_project/dropd.json";
+        var url = "/final_project/dropd.json";
         getJSON(url).then(function (data) {
             console.log(data);
 
