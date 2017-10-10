@@ -3,27 +3,22 @@
 body{
     margin: 0;
     border: 0;
+    height: 100vw;
 }
 
-
-
-body > .grey {
-    position: absolute;
-    height: 100%;
-    width: 1000px;
-    z-index: 9999;
-    background-color: grey;
+#grey {
+    width: 100%;
+    height: 200vw;
     opacity: 0;
-    transition:opacity 0.2s linear;
-    -webkit-transition-delay: 2.5s; /* Safari */
-    transition-delay: 2.5s;
+    background-color: dimgrey;
+    z-index: 999;
+    position: absolute;
+    -webkit-user-select:none;
+    user-select: none;
+    -webkit-touch-callout:none;
 }
 
-body:hover > .grey {
-    opacity: 0.8;
-}
-
-.container {
+#container {
     width: 50%;
     height: 130px;
     margin: 20px auto;
@@ -32,11 +27,18 @@ body:hover > .grey {
     text-align: center;
     line-height: 200px;
     position: relative;
-    z-index:99999;
+    z-index: 9999;
+    -webkit-user-select:none;
+    user-select: none;
+    -webkit-touch-callout:none;
 }
     img{
         height: 125px;
+        z-index: 99;
         position: relative;
+        -webkit-user-select:none;
+        user-select: none;
+        -webkit-touch-callout:none;
     }
 
 h1{
@@ -57,7 +59,7 @@ h1{
     font-size: 2em;
 }
 
-    .scanner {
+    #scanner {
         width: 200px;
         height: 2px;
         left: 0%;
@@ -70,17 +72,8 @@ h1{
         opacity: 0;
     }
 
-.container:active > .scanner {
-    opacity: 1;
-    transition:opacity 0.2s ease-in-out;
-    -webkit-transition-delay: 0.01s; /* Safari */
-    transition-delay: 0.01s;
-}
 
-.active {
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-}
+
 
 @keyframes scan {
 
