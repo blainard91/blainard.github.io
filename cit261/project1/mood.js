@@ -1,4 +1,4 @@
-screen.lockOrientation('portrait');
+//screen.lockOrientation('portrait');
 
 window.onload = function() {
     var grey = document.getElementById("grey");
