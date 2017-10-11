@@ -1,4 +1,21 @@
-//screen.lockOrientation('portrait');
+
+var moods = [
+    "/images/happy.gif",
+    "/images/sad.gif",
+    "/images/bored.gif",
+    "/images/disgust.gif",
+    "/images/fear.gif",
+    "/images/love.gif",
+    "/images/anger.gif"]
+
+
+function pickMood(){
+var num = Math.round(Math.random()*7);
+var save = moods[num].valueOf();
+    console.log(save);
+var moodGif = document.getElementById("moodGif");
+moodGif.setAttribute("src", save);
+};
 
 window.onload = function() {
     var grey = document.getElementById("grey");
@@ -20,6 +37,8 @@ window.onload = function() {
             scanner.style.opacity = "0";
             mood.style.opacity = "1"
             mood.style.zIndex = "9999";
+            container.style.zIndex = "9";
+            pickMood();
     })
 
     grey.addEventListener('touchstart', function(){
@@ -27,6 +46,7 @@ window.onload = function() {
             grey.style.opacity = "0";
             mood.style.opacity = "0"
             mood.style.zIndex = "9";
+            container.style.zIndex = "999";
         }
     })
     mood.addEventListener('touchstart', function(){
@@ -34,6 +54,7 @@ window.onload = function() {
              grey.style.opacity = "0";
              mood.style.opacity = "0"
              mood.style.zIndex = "9";
+             container.style.zIndex = "999";
         }
     })
 }
