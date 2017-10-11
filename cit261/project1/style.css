@@ -7,6 +7,11 @@ body{
     z-index: 9999999;
 }
 
+#moodGif {
+    width: 100%;
+    height:auto;
+}
+
 #mood {
     display: grid;
     grid-template-columns: 1fr 80% 1fr;
