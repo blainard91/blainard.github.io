@@ -8,8 +8,12 @@ body{
 }
 
 #moodGif {
+    grid-area: moodGif;
     width: 100%;
     height:auto;
+    align-self: center;
+
+
 }
 
 #mood {
@@ -24,10 +28,12 @@ body{
 }
 
 #moodBox {
-    background-color: white;
     grid-area: moodBox;
     height: 90vw;
     margin-top: 45vw;
+    display: grid;
+    grid-template-areas:
+        "moodGif";
 }
 
 #grey {
