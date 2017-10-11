@@ -1,3 +1,5 @@
+screen.lockOrientation('portrait');
+
 window.onload = function() {
     var grey = document.getElementById("grey");
     var container = document.getElementById("container");
