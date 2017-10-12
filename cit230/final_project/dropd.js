@@ -46,7 +46,7 @@ var parseQueryString = function(url) {
 
 
     function fetchData(grab) {
-        var url = "/final_project/dropd.json";
+        var url = "/cit230/final_project/dropd.json";
         getJSON(url).then(function (data) {
             console.log(data);
 

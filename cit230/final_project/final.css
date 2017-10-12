@@ -100,7 +100,7 @@ nav a:active{
 }
 
 #banner {
-    background-image: url(/final_project/guitaramplarge.jpg);
+    background-image: url(guitaramplarge.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -116,7 +116,7 @@ nav a:active{
 #pricingbanner {
     width: 100%;
     height: 20em;
-    background-image: url(/final_project/keyboard.jpg);
+    background-image: url(keyboard.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -133,7 +133,7 @@ nav a:active{
 }
 
 #contactbanner {
-    background-image: url(/final_project/drumset.jpg);
+    background-image: url(drumset.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -152,7 +152,7 @@ nav a:active{
 }
 
 #infobanner {
-    background-image: url(/final_project/microphone.jpg);
+    background-image: url(microphone.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
