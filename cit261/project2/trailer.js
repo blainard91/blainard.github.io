@@ -195,8 +195,11 @@ var movies = [
     },
 ];
 
+localStorage.genre1 = "";
+localStorage.genre2 = "";
 
 window.onload = function() {
+
     var trailer1Over = document.getElementById("trailer1Over");
     var trailer2Over = document.getElementById("trailer2Over");
     var trailer3Over = document.getElementById("trailer3Over");
@@ -209,18 +212,47 @@ window.onload = function() {
     var randomTrailer2 = movies[Math.floor(Math.random() * movies.length)];
     var randomTrailer3 = movies[Math.floor(Math.random() * movies.length)];
 
-    while (randomTrailer2.src == randomTrailer1.src || randomTrailer2.src == randomTrailer3.src){
-        randomTrailer2 = movies[Math.floor(Math.random() * movies.length)];
+    if (localStorage.genre1 == ""){
+
+        while (randomTrailer2.src == randomTrailer1.src || randomTrailer2.src == randomTrailer3.src){
+            randomTrailer2 = movies[Math.floor(Math.random() * movies.length)];
+        }
+
+        while (randomTrailer3.src == randomTrailer1.src || randomTrailer3.src == randomTrailer1.src){
+            randomTrailer3 = movies[Math.floor(Math.random() * movies.length)];
+        }
+
+    } else {
+        while (randomTrailer1.genre != localStorage.genre1 || randomTrailer1.genre != localStorage.genre2){
+            randomTrailer1 = movies[Math.floor(Math.random() * movies.length)];
+        }
+
+        while (randomTrailer2.src != localStorage.genre1 || randomTrailer2.genre != localStorage.genre1){
+            randomTrailer2 = movies[Math.floor(Math.random() * movies.length)];
+        }
+        while (randomTrailer3.src != localStorage.genre1 || randomTrailer3.genre != localStorage.genre1){
+            randomTrailer3 = movies[Math.floor(Math.random() * movies.length)];
+        }
     }
 
-    while (randomTrailer3.src == randomTrailer1.src || randomTrailer3.src == randomTrailer1.src){
-        randomTrailer3 = movies[Math.floor(Math.random() * movies.length)];
-    }
 
     trailer1.src = randomTrailer1.src;
     trailer2.src = randomTrailer2.poster;
     trailer3.src = randomTrailer3.poster;
 
+
+    trailer1.addEventListener('touchstart', function(){
+
+        localStorage.genre2 = localStorage.genre1;
+
+        if (trailer1.src == randomTrailer2.full){
+            localStorage.genre1 = randomTrailer2.genre;
+        } else if (trailer1.src == randomTrailer3.full){
+            localStorage.genre1 = randomTrailer3.genre;
+        } else {
+            localStorage.genre1 = randomTrailer1.genre;
+        }
+    })
 
     trailer2Over.addEventListener('touchstart', function(){
             trailer1.src = randomTrailer2.full;
