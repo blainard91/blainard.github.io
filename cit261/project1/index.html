@@ -6,11 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" >
     <link rel="stylesheet" href="style.css" type="text/css" media="screen">
     <title>Moodie</title>
+    <!--<meta property="og:title"         content="Moodie" />
+    <meta property="og:description"   content="Find a Gif for Your Mood!" />
+    <meta property="og:image" content="" />-->
 </head>
     <body id="body">
+        <!-- Facebook Code -->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+        <!-- End Facebook Code -->
         <section id="mood">
             <section id="moodBox">
                 <img id="moodGif" alt="">
+                <div class="fb-share-button" data-href="https://blainard91.github.io/cit261/project1/index.html" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblainard91.github.io%2Fcit261%2Fproject1%2Findex.html&amp;src=sdkpreparse">Share</a></div>
             </section>
         </section>
         <section id="grey"></section>

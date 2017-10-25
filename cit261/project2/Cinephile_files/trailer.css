@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Fascinate+Inline');
+
+html {
+    background-image: url(film.jpg);
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 80% 1fr;
+    grid-template-areas:
+        ". title ."
+        ". trailer1 ."
+        ". trailer2 ."
+        ". trailer3 .";
+}
+
+#grey {
+    width: 100vw;
+    height: 200vw;
+    margin: 0;
+    z-index: 0;
+    position: absolute;
+    opacity: 0;
+}
+
+#pickedTrailer {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+h1 {
+    grid-area: title;
+    text-align: center;
+    font-family: 'Fascinate Inline', cursive;
+    color: white;
+    font-size: 2em;
+}
+
+#trailer1 {
+    grid-area: trailer1;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    z-index: 98;
+    text-align: center;
+    border-style: solid;
+    border-width: thick;
+    border-color: white;
+}
+
+#trailer1Over {
+    grid-area: trailer1;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    z-index: 99;
+    width: 80%;
+}
+
+#trailer2 {
+    grid-area: trailer2;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    z-index: 98;
+    text-align: center;
+    border-style: solid;
+    border-width: thick;
+    border-color: white;
+}
+
+#trailer2Over {
+    grid-area: trailer2;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    z-index: 99;
+    width: 80%;
+}
+
+#trailer3 {
+    grid-area: trailer3;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    z-index: 98;
+    text-align: center;
+    border-style: solid;
+    border-width: thick;
+    border-color: white;
+}
+
+#trailer3Over {
+    grid-area: trailer3;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    z-index: 99;
+    width: 80%;
+}

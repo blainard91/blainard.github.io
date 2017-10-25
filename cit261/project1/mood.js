@@ -10,9 +10,10 @@ var moods = [
 
 
 function pickMood(){
-var num = Math.round(Math.random()*7);
+var num = Math.round(Math.random()*6);
 var save = moods[num].valueOf();
     console.log(save);
+
 var moodGif = document.getElementById("moodGif");
 moodGif.setAttribute("src", save);
 };

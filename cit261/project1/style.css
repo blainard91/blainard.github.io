@@ -16,6 +16,13 @@ body{
 
 }
 
+
+.fb-share-button {
+    margin-top: 3em;
+    text-align: center;
+}
+
+
 #mood {
     display: grid;
     grid-template-columns: 1fr 80% 1fr;
@@ -86,7 +93,7 @@ h1{
     background-clip: text;
     font-family: 'Luckiest Guy', cursive;
     text-align: center;
-    font-size: 2em;
+    font-size: 4em;
 }
 
     #scanner {
