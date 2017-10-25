@@ -244,6 +244,14 @@ window.onload = function() {
             pickedTrailer.src = randomTrailer3.full;
         }
     })
+
+    grey.addEventListener('touchstart', function(){
+        if (grey.style.opacity > "0"){
+            grey.style.opacity = "0";
+            grey.style.zIndex = "0";
+            pickedTrailer.src = "";
+        }
+    })
 }
 
 
