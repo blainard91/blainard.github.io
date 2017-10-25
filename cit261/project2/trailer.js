@@ -221,36 +221,13 @@ window.onload = function() {
     trailer2.src = randomTrailer2.poster;
     trailer3.src = randomTrailer3.poster;
 
-    trailer1Over.addEventListener('touchstart', function(){
-        if (grey.style.opacity < "0"){
-            grey.style.opacity = "1";
-            grey.style.zIndex = "999";
-            pickedTrailer.src = randomTrailer1.full;
-        }
-    })
 
     trailer2Over.addEventListener('touchstart', function(){
-        if (grey.style.opacity < "0"){
-            grey.style.opacity = "1";
-            grey.style.zIndex = "999";
-            pickedTrailer.src = randomTrailer2.full;
-        }
+            trailer1.src = randomTrailer2.full;
     })
 
     trailer3Over.addEventListener('touchstart', function(){
-        if (grey.style.opacity < "0"){
-            grey.style.opacity = "1";
-            grey.style.zIndex = "999";
-            pickedTrailer.src = randomTrailer3.full;
-        }
-    })
-
-    grey.addEventListener('touchstart', function(){
-        if (grey.style.opacity > "0"){
-            grey.style.opacity = "0";
-            grey.style.zIndex = "0";
-            pickedTrailer.src = "";
-        }
+            trailer1.src = randomTrailer3.full;
     })
 }
 
