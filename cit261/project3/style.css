@@ -1,0 +1,43 @@
+
+#scanner-container {
+    grid-area: barcode;
+    justify-self: center;
+    margin-top: 40%;
+}
+
+#scanner-container canvas{
+    justify-self: center;
+    margin-top: 30%;
+    height: 280px;
+}
+
+#scanner-container video {
+    width: 400px;
+}
+
+#result {
+    font-family: verdana;
+    font-size: 1.5em;
+    grid-area: result;
+    text-align: center;
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.8;
+}
+
+body {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 80% 1fr;
+    grid-template-areas:
+        ". space ."
+        ". barcode ."
+        ". result .";
+    grid-template-rows: 30%;
+    background-image: url(galifrey.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
