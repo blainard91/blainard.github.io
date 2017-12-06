@@ -60,6 +60,10 @@
                     }
                 }
                 resultDiv.innerHTML += "</ul>";
+                video.setAttribute("controls", true);
+                setTimeout(() => {
+                    video.removeAttribute("controls");
+                });
             }
 
 
