@@ -27,7 +27,7 @@ function getJSON(url) {
 }) ();
 
 function fetchData(grab) {
-    var url = "/blainard91.github.io/Weather/Javascript/weather.json";
+    var url = "/blainard91.github.io/cit230/Weather/Javascript/weather.json";
     getJSON(url).then(function (data) {
         console.log(data);
         var city = data[grab]["City"];
