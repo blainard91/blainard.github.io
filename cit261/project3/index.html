@@ -173,11 +173,13 @@
                         Quagga.stop();
                         _scannerIsRunning = false;
                         console.log(employees[i]["clock"]);
+                        localStorage.setItem("employees", JSON.stringify(employees));
                         window.location.reload(true);
                     } else if (result.codeResult.code == employees[i].barcode && employees[i].clock == 'in') {
                         employees[i].clock = 'out';
                         Quagga.stop();
                         _scannerIsRunning = false;
+                        localStorage.setItem("employees", JSON.stringify(employees));
                         window.location.reload(true);
                         console.log(employees[i]["clock"]);
                         for (i = 0; i < employees.length; i++) {
