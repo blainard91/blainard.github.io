@@ -170,11 +170,15 @@
                     if (result.codeResult.code == employees[i].barcode && employees[i].clock == 'out') {
                         resultDiv.innerHTML += "<li>" + employees[i].first + " " + employees[i].last + "</li>";
                         employees[i].clock = 'in';
+                        Quagga.stop();
+                        _scannerIsRunning = false;
                         console.log(employees[i]["clock"]);
+                        window.location.reload(true);
                     } else if (result.codeResult.code == employees[i].barcode && employees[i].clock == 'in') {
                         employees[i].clock = 'out';
                         Quagga.stop();
                         _scannerIsRunning = false;
+                        window.location.reload(true);
                         console.log(employees[i]["clock"]);
                         for (i = 0; i < employees.length; i++) {
                             if (result.codeResult.code == employees[i].barcode && employees[i].clock == 'in') {
@@ -194,7 +198,7 @@
 
 
 
-                window.location.reload(true);
+
 
             });
         }
