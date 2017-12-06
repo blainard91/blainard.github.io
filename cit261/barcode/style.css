@@ -1,0 +1,39 @@
+
+
+#barcodevideo, #barcodecanvas, #barcodecanvasg {
+    height: 300px;
+    grid-area: barcode;
+    justify-self: center;
+}
+
+#barcodecanvasg {
+    top: 0px;
+    left: 0px;
+
+}
+
+#result {
+    font-family: verdana;
+    font-size: 1.5em;
+    grid-area: result;
+    text-align: center;
+}
+
+#barcode {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 80% 1fr;
+    grid-template-areas:
+        ". space ."
+        ". barcode ."
+        ". result .";
+    grid-template-rows: 30%;
+}
+
+#barcodecanvas {
+    display: none;
+}
+
+#space {
+    margin-top: 150px;
+}

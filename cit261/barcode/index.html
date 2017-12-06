@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="barcode.js"></script>
+        <!--<script type="text/javascript" src="employees.js"></script>-->
+
+        <script type="text/javascript">
+            var employeeInfo = [
+                {
+                    "first": "Joseph",
+                    "last": "Smith",
+                    "barcode": "0000000000017",
+                    "clock": "out"
+                },
+            ];
+
+            if (localStorage.getItem("employees")===null){
+
+                localStorage.setItem("employees", JSON.stringify(employeeInfo));
+            }
+
+
+            window.onload = function(barcode){
+                var employees = JSON.parse(localStorage.getItem("employees"));
+                console.log(employees);
+                const resultDiv = document.getElementById("result");
+                resultDiv.innerHTML = "<h3>Clocked In:</h3>";
+                resultDiv.innerHTML += "<ul>";
+                for (i=0; i<employees.length; i++){
+                    if(employees[i].clock == 'in'){
+                        resultDiv.innerHTML += "<li>" + employees[i].first + " " + employees[i].last + "</li>";
+                    }
+                }
+                resultDiv.innerHTML += "</ul>";
+            }
+
+            var sound = new Audio("barcode.wav");
+
+            $(document).ready(function() {
+
+                barcode.config.start = 0.1;
+                barcode.config.end = 0.9;
+                barcode.config.video = '#barcodevideo';
+                barcode.config.canvas = '#barcodecanvas';
+                barcode.config.canvasg = '#barcodecanvasg';
+
+                barcode.setHandler(function(barcode) {
+                    var employees = JSON.parse(localStorage.getItem("employees"));
+
+                    const resultDiv = document.getElementById("result");
+                    resultDiv.innerHTML = "<h3>Clocked In:</h3>";
+                    resultDiv.innerHTML += "<ul>";
+                    for (i=0; i<employees.length; i++){
+                        if(barcode == employees[i].barcode && employees[i].clock == 'out'){
+                            resultDiv.innerHTML += "<li>" + employees[i].first + " " + employees[i].last + "</li>";
+                            employees[i].clock = 'in';
+                            console.log
+                        } else if(barcode == employees[i].barcode && employees[i].clock == 'in'){
+                            employees[i].clock = 'out';
+                            for (i=0; i<employees.length; i++){
+                                if(barcode == employees[i].barcode && employees[i].clock == 'in'){
+                                    resultDiv.innerHTML = "<h3>Clocked In:</h3>";
+                                    resultDiv.innerHTML += "<ul>";
+                                    resultDiv.innerHTML += "<li>" + employees[i].first + " " + employees[i].last + "</li>";
+                                }
+                            }
+
+                        }
+                        console.log(employees[0].clock);
+                        resultDiv.innerHTML += "</ul>";
+                    }
+
+                    localStorage.setItem("employees", JSON.stringify(employees));
+                    sound.play();
+
+
+
+                    window.location.reload(true);
+                });
+                barcode.init();
+
+                //    $('#result').bind('DOMSubtreeModified', function(e) {
+                //        sound.play();
+                //    });
+
+            });
+
+        </script>
+
+    </head>
+    <body>
+        <div id="space"></div>
+
+        <div id="barcode">
+            <video id="barcodevideo" autoplay></video>
+            <canvas id="barcodecanvasg" ></canvas>
+        </div>
+        <canvas id="barcodecanvas" ></canvas>
+        <div id="result"></div>
+
+    </body>
+</html>
